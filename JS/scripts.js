@@ -26,3 +26,11 @@ function details() {
     DD = parseInt(document.getElementById("date").value);
     // variable to calucalte day of the week having the initial doW 
     var doW = parseInt(((CC / 4) - 2 * CC - 1) + ((5 * YY / 4)) + ((26 * (MM + 1) / 10)) + DD) % 7;
+    //to show the selected gender whether ,male or female
+    //the variable is useful when using it on the if condition
+    gender = document.querySelector('input[name="gender"]:checked').value;
+    if (gender === "male" && doW === 1) {
+        alert("Your AkanName is" + maleAkanName[0] + "and you were born on a" + day[0]);
+    } else if (doW === 2) {
+        alert("Your AkanName is" + maleAkanName[1] + "and you were born on a" + day[1]);
+    } else if (doW === 3) {
