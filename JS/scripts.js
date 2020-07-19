@@ -19,3 +19,8 @@ function details() {
     } else if (MM > 12) {
         alert("no such month");
     }
+    //calculating the day of the week
+    CC = parseInt(document.getElementById("century").value);
+    YY = parseInt(document.getElementById("year").value);
+    MM = parseInt(document.getElementById("month").value);
+    DD = parseInt(document.getElementById("date").value);
