@@ -44,3 +44,13 @@ function details() {
     } else if (doW === 7) {
         alert("Your AkanName is" + maleAkanName[6] + "and you were born on a" + day[6]);
     } else {
+        if (doW === 1) {
+            alert("Your AkanName is" + femaleAkanName[0] + "and you were born on a" + day[0]);
+        } else if (doW === 2) {
+            alert("Your AkanName is" + femaleAkanName[1] + "and you were born on a" + day[1]);
+
+        } else if (doW === 3) {
+            alert("Your AkanName is" + maleAkanName[2] + "and you were born on a" + day[2]);
+
+        } else if (doW === 4) {
+            alert("Your AkanName is" + femaleAkanName[3] + "and you were born on a" + day[3]);
