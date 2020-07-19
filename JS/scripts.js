@@ -9,3 +9,13 @@ function details() {
     var MM = document.getElementById("month");
     var DD = document.getElementById("date");
     //validating date and month of birth
+    if (DD <= 0) {
+        alert("invalid date");
+    } else if (DD > 31) {
+        alert("date is invalid");
+    }
+    if (MM <= 0) {
+        alert("invalid month");
+    } else if (MM > 12) {
+        alert("no such month");
+    }
