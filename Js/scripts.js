@@ -1,14 +1,22 @@
+// a function to perform the tasks||calculate values in this sheet
 function details() {
     //variables and arrays
     var femaleAkanName = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
     var maleAkanName = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
-    var day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thusday", "Friday", "Saturday"];
-    var gender = document.getElementById("gender");
-    var CC = document.getElementById("century");
-    var YY = document.getElementById("year");
-    var MM = document.getElementById("month");
-    var DD = document.getElementById("date");
+    var day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    // // var gender = document.getElementById("gender");
+    // var CC = document.getElementById("century");
+    // var YY = document.getElementById("year");
+    // var MM = document.getElementById("month");
+    // var DD = document.getElementById("date");
     //validating date and month of birth
+
+
+    //calculating the day of the week
+    var CC = parseInt(document.getElementById("century").value);
+    var YY = parseInt(document.getElementById("year").value);
+    var MM = parseInt(document.getElementById("month").value);
+    var DD = parseInt(document.getElementById("date").value);
     if (DD <= 0) {
         alert("invalid date");
     } else if (DD > 31) {
@@ -19,13 +27,9 @@ function details() {
     } else if (MM > 12) {
         alert("no such month");
     }
-    //calculating the day of the week
-    CC = parseInt(document.getElementById("century").value);
-    YY = parseInt(document.getElementById("year").value);
-    MM = parseInt(document.getElementById("month").value);
-    DD = parseInt(document.getElementById("date").value);
     // variable to calucalte day of the week having the initial doW 
     var doW = parseInt(((CC / 4) - 2 * CC - 1) + ((5 * YY / 4)) + ((26 * (MM + 1) / 10)) + DD) % 7;
+
     //to show the selected gender whether ,male or female
     //the variable is useful when using it on the if condition
     gender = document.querySelector('input[name="gender"]:checked').value;
@@ -54,6 +58,7 @@ function details() {
 
         } else if (doW === 4) {
             alert("Your AkanName is" + femaleAkanName[3] + "and you were born on a" + day[3]);
+
         } else if (doW === 5) {
             alert("Your AkanName is" + femaleAkanName[4] + "and you were born on a" + day[4]);
 

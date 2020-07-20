@@ -1,0 +1,9 @@
+.main {
+    text-align: center;
+}
+
+body {
+    background-image: url("../image/ocean.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
